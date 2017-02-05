@@ -5,14 +5,14 @@ global.jQuery = require('jquery');
 const app = express()
 let port = 3000;
 
-app.get('/', (req, res) => {
+app.use('/', (req, res) => {
   res.send('Welcome to root')
 })
-app.get('/about', (req, res) => {
+app.use('/about', (req, res) => {
   res.send('about Kevin')
 })
 
-app.get('/contact', (req, res) => {
+app.use('/contact', (req, res) => {
   res.send('How to contact me: ')
 })
 
