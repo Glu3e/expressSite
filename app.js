@@ -18,3 +18,5 @@ app.get('/contact', (req, res) => {
 
 app.listen(port) 
   console.log(`server running at https://localhost${port}`);
+
+ module.exports = app;  
