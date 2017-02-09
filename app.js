@@ -3,7 +3,7 @@ global.jQuery = require('jquery');
 //let bootstrap = require('bootstrap');
 
 const app = express()
-let port = 3000;
+//let port = 3000;
 
 app.use('/', (req, res) => {
   res.send('Welcome to root')
@@ -16,7 +16,9 @@ app.use('/contact', (req, res) => {
   res.send('How to contact me: ')
 })
 
-app.listen(port) 
-  console.log(`server running at https://localhost${port}`);
+app.listen(()=> {
+  console.log(`server started...`);
+}) 
+  //console.log(`server running at https://localhost${port}`);
 
  module.exports = app;  
