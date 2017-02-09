@@ -1,29 +1,46 @@
-let express = require('express');
-global.jQuery = require('jquery');
-//let bootstrap = require('bootstrap');
+var express = require('express');
+var path = require('path');
+var favicon = require('serve-favicon');
+var logger = require('morgan');
+var cookieParser = require('cookie-parser');
+var bodyParser = require('body-parser');
 
-const app = express()
-let localport = 3000;
+var index = require('./routes/index');
+var users = require('./routes/users');
 
-app.use('/', (req, res) => {
-  res.send('Welcome to root')
-})
-app.use('/about', (req, res) => {
-  res.send('about Kevin')
-})
+var app = express();
 
-app.use('/contact', (req, res) => {
-  res.send('How to contact me: ')
-})
+// view engine setup
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'ejs');
 
-/**
- * Get port from enviroment and store in express
- */
-let port = process.env.PORT || localport;
-app.set('port',port);
+// uncomment after placing your favicon in /public
+//app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
+app.use(logger('dev'));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(cookieParser());
+app.use(express.static(path.join(__dirname, 'public')));
 
-app.listen(port);
-console.log(`server running at https://localhost${port}`);
-  
+app.use('/', index);
+app.use('/users', users);
 
- module.exports = app;  
+// catch 404 and forward to error handler
+app.use(function(req, res, next) {
+  var err = new Error('Not Found');
+  err.status = 404;
+  next(err);
+});
+
+// error handler
+app.use(function(err, req, res, next) {
+  // set locals, only providing error in development
+  res.locals.message = err.message;
+  res.locals.error = req.app.get('env') === 'development' ? err : {};
+
+  // render the error page
+  res.status(err.status || 500);
+  res.render('error');
+});
+
+module.exports = app;
