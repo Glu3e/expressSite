@@ -6,7 +6,7 @@ router.get('/', (req, res, next) => {
   let currentDate = new Date();
   res.render('index', {
      title: 'Home',
-     date: (currentDate.getMonth() +1) + "/"+ currentDate.getDate()+"/"+ currentDate.getFullYear()
+//date: (currentDate.getMonth() +1) + "/"+ currentDate.getDate()+"/"+ currentDate.getFullYear()
     });
 });
 

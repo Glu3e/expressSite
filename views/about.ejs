@@ -1,32 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <!-- about.ejs, 
-    Kevin Cornejo-Andrade, 
-    Kevin's Portfolio(kevinExpress)-->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title><%= title %></title>
-    <!-- CSS -->
-    <link rel='stylesheet' href='/Script/lib/bootstrap/dist/css/bootstrap.min.css' />
-    <link rel='stylesheet' href='/Script/lib/bootstrap/dist/css/bootstrap-theme.min.css' />
-    <link rel='stylesheet' href='public/Content/app.css' />
-  </head>
-  <body>
-<!-- Navigation Bar -->
-<nav class="navbar navbar-inverse">
-  <div class="container-fluid">
-      <div class="navbar-header">
-      <a class="navbar-brand" href="/">Kevin's Portfolio</a>
-      </div>
-      <ul class="nav navbar-nav">
-      <li><a href="/">Home</a></li>
-      <li class="active"><a href="/about">About</a></li>
-      <li><a href="/contact">Contact Me</a></li>
-     </ul>
-  </div>
-</nav>
 
+<% include partials/header.ejs %>
     <h1><%= title %> Me</h1>
     <p>About Me</p>
     <div class="about" style="width: 550px">
@@ -35,9 +8,4 @@
       around ontario. By adventures i mean camping walks bonfires just zen things. ontop of that stuff i just like to code and
       have fun with my coding while learning and meeting new people! </p>
     </div>
-     <!-- Scripts -->
-    <style src="/Script/lib/jquery/dist/jquery.min.js"></style>
-    <style src="/Script/lib/bootstrap/dist/js/bootstrap.min.js"></style>
-    <style src="/Script/lib/app.js"></style>
-  </body>
-</html>
+   <% include partials/footer.ejs %>
