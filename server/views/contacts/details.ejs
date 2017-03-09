@@ -1,0 +1,37 @@
+<% include ../partials/Header.ejs %>
+
+    <!-- MAIN CONTENT -->
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-3 col-md-6">
+          <h1><%= title %></h1>
+            <form class="form" method="post">
+              <div class="form-group">
+                <label for="NameTextField">Name</label>
+                <input type="text" class="form-control" id="NameTextField"
+                placeholder="Contact Name" name="name" value="<%= contacts.name %>" required>
+              </div>
+              <div class="form-group">
+                <label for="ContactNumTextField">Contact Number</label>
+                <input type="text" class="form-control" id="CostTextField"
+                placeholder="Contact Number" name="contactNumber" value="<%= contacts.contactNumber %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="EmailTextField">Email</label>
+                <input type="text" class="form-control" id="RatingTextField"
+                placeholder="Contact Email" name="email" value="<%= contacts.email %>"  required>
+              </div>
+              <div class="form-group">
+                <label for="AddressTextField">Address</label>
+                <input type="text" class="form-control" id="RatingTextField"
+                placeholder="Contact Email" name="address" value="<%= contacts.address %>"  required>
+              </div>
+
+              <button type="submit" class="btn btn-primary"><i class="fa fa-check-square-o"></i> Submit</button>
+              <a href="/contacts" class="btn btn-warning"><i class="fa fa-undo"></i> Cancel</a>
+            </form>
+        </div>
+      </div>
+    </div>
+
+<% include ../partials/Footer.ejs %>

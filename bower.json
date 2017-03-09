@@ -1,6 +1,6 @@
 {
   "name": "expresssite",
-  "description": "## Lesson 3B",
+  "description": "## Portfolio-Assignment2",
   "main": "server.js",
   "authors": [
     "Kevin Cornejo-Andrade"
@@ -8,7 +8,8 @@
   "license": "ISC",
   "keywords": [
     "NodeJS",
-    "ExpressJS"
+    "ExpressJS",
+    "EJS"
   ],
   "homepage": "https://github.com/Glu3e/expressSite",
   "ignore": [

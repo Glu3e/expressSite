@@ -1,10 +1,11 @@
-<% include partials/Header.ejs %>
+<% include ../partials/Header.ejs %>
+
     <h1><%= title %> </h1>
     <p>How to Contact me </p>
 
     <div class="container">
   <h2>Contact form</h2>
-  <form action="mailto:kandrade.kca@gmail.com" method="POST" enctype="text/plain">
+  <form action="POST" method="" enctype="text/plain">
        <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter name">
@@ -20,7 +21,7 @@
     <button type="submit" class="btn">Submit</button>
   </form>
 </div>
- <% include partials/Footer.ejs %>
+ <% include ../partials/Footer.ejs %>
 
 
    

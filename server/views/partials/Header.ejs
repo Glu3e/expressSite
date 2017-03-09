@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- index.ejs, 
+    Kevin Cornejo-Andrade, 
+    Kevin's Portfolio(kevinExpress)-->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %></title>
+    <!-- CSS -->
+   <link rel="stylesheet" href=" /Script/lib/font-awesome/css/font-awesome.min.css">
+    <link rel='stylesheet' href='/Script/lib/bootstrap/dist/css/bootstrap.min.css' />
+    <link rel='stylesheet' href='/Script/lib/bootstrap/dist/css/bootstrap-theme.min.css' />
+    <link rel='stylesheet' href='public/Content/app.css' />
+  </head>
+  <body> 
+<!-- Navigation Bar -->
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+      <div class="navbar-header">
+      <a class="navbar-brand" href="/"><i class="fa fa-empire"></i> Kevin's Portfolio </a>
+      </div>
+      <ul class="nav navbar-nav">
+
+        <% if(title == "Home") { %>
+
+            <li class="active"><a href="/"><i class="fa fa-home"></i> Home</a></li>
+            <li><a href="/about"><i class="fa fa-info"></i> About Me</a></li>
+            
+
+        <%} else if(title == "About") {%>
+             <li class="active"><a href="/about"><i class="fa fa-info"></i> About Me</a></li>
+        <% } else { %>
+          <li><a href="/about"><i class="fa fa-info"></i> About Me</a></li>
+        <% } %>
+          
+          <% if(title == "Contact") { %>
+          <li class="active"><a href="/contact"><i class="fa fa-phone fa-lg"></i> Contact Me</a></li>
+        <% } else { %>
+          <li><a href="/contact"><i class="fa fa-phone fa-lg"></i> Contact Me</a></li>
+        <% } %>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <% if(title == "Contacts") { %>
+          <li class="active"><a href="/contacts"><i class="fa fa-address-book-o">
+          </i> Contact List</a></li>
+          <% } else { %>
+            <li><a href="/contacts"><i class="fa fa-address-book-o">
+            </i> Contact List</a></li>
+          <% } %>
+        <% } %>
+
+        <% if(typeof displayName == 'string' && displayName) { %>
+          <li class="navbar-text"><i class="fa fa-user"></i> Welcome, <%= displayName %></li>
+          <li><a href="/logout"><i class="fa fa-sign-out"></i> Logout</a></li>
+        <% } else { %>
+          <li><a href="/login"><i class="fa fa-sign-in"></i> Login</a></li>
+        <% } %>
+        
+     </ul>
+  </div>
+</nav>
