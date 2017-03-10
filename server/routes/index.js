@@ -61,7 +61,7 @@ router.get('/login', (req, res, next)=>{
 
 // POST /login - process the login attempt
 router.post('/login', passport.authenticate('local', {
-  successRedirect: '/', //redirects to home instead of contact list
+  successRedirect: '/contacts', //redirects to home instead of contact list
   failureRedirect: '/login',
   failureFlash: 'bad login'
 }));
