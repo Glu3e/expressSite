@@ -1,3 +1,10 @@
+/*
+FileName: contacts.js
+Author: Kevin Cornejo-Andrade 
+WebSite: https://kevinexpress.herokuapp.com/
+Description: mongo schema for contacts collection 
+*/
+
 let mongoose = require('mongoose');
 
 // create a model class

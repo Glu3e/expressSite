@@ -1,3 +1,10 @@
+/*
+FileName: index.js
+Author: Kevin Cornejo-Andrade 
+WebSite: https://kevinexpress.herokuapp.com/
+Description: top level routing and auth login routes 
+*/
+
 let express = require('express');
 let mongoose = require('mongoose');
 let passport = require('passport');

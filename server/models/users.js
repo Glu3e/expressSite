@@ -1,3 +1,10 @@
+/*
+FileName: users.js
+Author: Kevin Cornejo-Andrade 
+WebSite: https://kevinexpress.herokuapp.com/
+Description: mongo schema for user collection
+*/
+
 //require modules for our User Model
 let mongoose = require('mongoose');
 let Schema = mongoose.Schema; //alias for mongoose Schema
