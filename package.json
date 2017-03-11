@@ -6,7 +6,7 @@
     "start": "node server.js"
   },
   "dependencies": {
-   "body": "^5.1.0",
+    "body": "^5.1.0",
     "body-parser": "^1.15.2",
     "connect-flash": "^0.1.1",
     "cookie-parser": "^1.4.3",
@@ -16,6 +16,7 @@
     "express-session": "^1.15.1",
     "mongoose": "^4.8.1",
     "morgan": "^1.7.0",
+    "octicons": "^5.0.1",
     "parser": "^0.1.4",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
@@ -28,8 +29,7 @@
   },
   "description": "## Lesson 3B",
   "main": "server.js",
-
-"devDependencies": {
+  "devDependencies": {
     "@types/body-parser": "0.0.33",
     "@types/bootstrap": "^3.3.32",
     "@types/connect-flash": "0.0.31",
@@ -44,7 +44,6 @@
     "@types/passport-local": "^1.0.29",
     "@types/passport-local-mongoose": "^4.0.8"
   },
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Glu3e/expressSite.git"
