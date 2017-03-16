@@ -12,7 +12,7 @@ Description: contact form
 
     <div class="container">
   <h2>Contact form</h2>
-  <form action="mailto:kandrade.kca@gmail.com" method="POST" enctype="text/plain">
+  <form action="mailto:kandrade.kca@gmail.com" method="POST" enctype="text/plain" onSubmit="alert('Email Sent!');">
        <div class="form-group">
       <label for="name">Name:</label>
       <input type="text" class="form-control" id="name" placeholder="Enter name">
@@ -25,8 +25,9 @@ Description: contact form
       <label for="comment">Comments:</label>
       <input type="text" class="form-control" id="comment" placeholder="Leave me a comment :)">
     </div>
-    <button type="submit" class="btn">Submit</button>
+    <button type="Submit" class="btn">Submit</button>
   </form>
+   
 </div>
  <% include ../partials/Footer.ejs %>
 
