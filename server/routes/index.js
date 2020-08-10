@@ -50,6 +50,7 @@ router.get('/contact', (req, res, next) => {
     displayName: req.user ? req.user.displayName : '' });
 });
 
+/*
 router.get('/login', (req, res, next)=>{
   // check to see if the user is not already logged in
   if(!req.user) {
@@ -64,7 +65,7 @@ router.get('/login', (req, res, next)=>{
   } else {
     return res.redirect('/contacts'); // redirect to games list
   }
-});
+});*/
 
 // POST /login - process the login attempt
 router.post('/login', passport.authenticate('local', {
